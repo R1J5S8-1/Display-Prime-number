@@ -11,21 +11,24 @@
      let num = prompt("Enter Any Nmber");
       let isPrime=true;
       if(num>=0){
-        if (num === 0 || num === 1) {
-            alert(num + " in neither prime nor composite number");
-        }
-        for(let i=2;i<num;i++){
+        
+        for(let i=2;i<num/2;i++){
+            
           if(num%i==0){
             isPrime=false;
             break;
           }
         }
-        if(isPrime==true){
+        if (num === 0 || num === 1) {
+            alert(num + " in neither prime nor composite number");
+        } else if(isPrime==true){
           alert(num+ "Prime Number")
         }
         else{
           alert(num+ " Not a Prime Number")
         }
+      } else {
+        alert("Enter Positive Number");
       }
       </script>
    
